@@ -13,3 +13,31 @@ int main(){
    
   return 0;
 }
+
+// Version 2.0 more apropriate for class
+
+int main(){
+  int redId =0;
+  
+  scnaf("%d",&redId);
+  
+  printf("%d\n",redId/100000000);
+  redId %= 100000000;
+  printf("%d\n",redId/10000000);
+  redId %= 10000000;
+  printf("%d\n",redId/1000000);
+  redId %= 1000000;
+  printf("%d\n",redId/100000);
+  redId %= 100000;
+  printf("%d\n",redId/10000);
+  redId %= 10000;
+  printf("%d\n",redId/1000);
+  redId %= 1000;
+  printf("%d\n",redId/100);
+  redId %= 100;
+  printf("%d\n",redId/10);
+  redId %= 10;
+  printf("%d\n",redId);
+  
+  return 0;
+}
