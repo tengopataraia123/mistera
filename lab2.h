@@ -8,6 +8,7 @@ int main(){
   int i =0;
   while(redId[i] != '\0'){
     printf("%c\n",redId[i]);
+    i+=1;
     }
    
   return 0;
