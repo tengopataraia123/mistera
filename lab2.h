@@ -19,7 +19,7 @@ int main(){
 int main(){
   int redId =0;
   
-  scnaf("%d",&redId);
+  scanf("%d",&redId);
   
   printf("%d\n",redId/100000000);
   redId %= 100000000;
