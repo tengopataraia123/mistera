@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main(void) {
+   char keepGoing;
+   int nextBid;
+
+   nextBid = 0;
+   keepGoing = 'y';
+
+   while (keepGoing == 'y'/* Your solution goes here  */) {
+      nextBid = nextBid + 3;
+      printf("I'll bid $%d!\n", nextBid);
+      printf("Continue bidding? (y/n) ");
+      scanf(" %c ", &keepGoing);
+   }
+   printf("\n");
+
+   return 0;
+}
