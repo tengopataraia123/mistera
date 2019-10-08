@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int main(void) {
+   int numRows;
+   int numColumns;
+   int currentRow;
+   int currentColumn;
+   char currentColumnLetter;
+
+   scanf("%d", &numRows);
+   scanf("%d", &numColumns);
+
+   /* Your solution goes here  */
+   
+   currentRow = 1;
+   
+   while(currentRow <= numRows){
+      currentColumnLetter = 'A';
+      currentColumn = 1;
+      while(currentColumn <= numColumns){
+         printf("%d%c ",currentRow,currentColumnLetter);
+         currentColumnLetter++;
+         currentColumn++;
+      }
+      
+      currentRow++;
+   }
+
+   printf("\n");
+
+   return 0;
+}
