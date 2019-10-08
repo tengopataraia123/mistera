@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <string.h>
+
+int main(void) {
+   char userString[50];
+   int userNum;
+   
+   /* Type your code here. */
+   
+   scanf("%s %d",userString,&userNum);
+   
+   while(strcmp(userString,"quit") != 0 && userNum != 0){
+      printf("Eating %d %s a day keeps the doctor away.\n",userNum,userString);
+      scanf("%s %d",userString,&userNum);
+}
+
+   return 0;
+}
