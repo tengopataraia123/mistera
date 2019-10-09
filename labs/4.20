@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <ctype.h>
+#include <string.h>
+
+int main(void) {
+
+   /* Type your code here. */
+   
+   char userString[20];
+   int isNum = 1;
+   
+   scanf("%s",userString);
+   
+   for(int i=0;i<strlen(userString);i++){
+      if(!isdigit(userString[i]))   isNum = 0;
+   }
+   
+   printf("%s\n",((isNum)?"yes":"no"));
+
+   return 0;
+}
