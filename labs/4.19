@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <string.h>
+
+int main(void) {
+
+   /* Type your code here. */
+   
+   char userString[30];
+   char userChar;
+   int counter = 0;
+   
+   scanf("%c %s",&userChar,userString);
+   
+   for(int i=0;userString[i] != '\0';i++){
+      if(userString[i] == userChar)    counter++;
+   }
+   
+   printf("%d\n",counter);
+
+   return 0;
+}
