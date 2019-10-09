@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main(void) {
+
+   /* Type your code here. */
+   
+   int first,second;
+   
+   scanf("%d %d",&first,&second);
+   
+   if(first<=second){
+      while(first<=second){
+         printf("%d ",first);
+         first += 10;
+      }
+      putchar('\n');
+   }else{
+      printf("Second integer can't be less than the first.\n");
+   }
+
+   return 0;
+}
