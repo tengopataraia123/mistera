@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main(void) {
+   const int NUM_ELEMENTS = 9;
+   int userValues[NUM_ELEMENTS];    // Set of data specified by the user
+
+   /* Type your code here. */
+   
+   int i=0;
+   
+   while(i<NUM_ELEMENTS+1){
+      scanf("%d",&userValues[i]);
+      if(userValues[i] < 0)   break;
+      i++;
+   }
+
+   if(i>NUM_ELEMENTS)   printf("Too many inputs\n");
+   else{
+      printf("%d\n",userValues[i/2]);
+   }
+
+   return 0;
+}
