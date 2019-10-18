@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main(void) {
+
+   int list[20];
+   int size,smallest;
+   
+   scanf("%d",&size);
+   
+   for(int i=0;i<size;i++)      scanf("%d",list+i);
+   
+   smallest = list[0];
+   
+   for(int i=0;i<size;i++)
+      if(list[i] < smallest)
+         smallest = list[i];
+   
+   for(int i=0;i<size;i++)
+      printf("%d ",list[i]-smallest);
+   
+   printf("\n");
+
+   return 0;
+}
