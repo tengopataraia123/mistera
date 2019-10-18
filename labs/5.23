@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <string.h>
+
+int main(void) {
+
+   char words[20][10];
+   int size;
+   char c;
+   
+   scanf("%d",&size);
+   
+   for(int i=0;i<size;i++)
+      scanf("%s",words[i]);
+   
+   scanf(" %c",&c);
+      
+   for(int i=0;i<size;i++){
+      for(int j=0;j<10;j++){
+         if(words[i][j] == c){
+            printf("%s\n",words[i]);
+            break;
+         }
+      }
+      
+   }
+
+   return 0;
+}
