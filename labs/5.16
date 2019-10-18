@@ -1,0 +1,82 @@
+#include <stdio.h>
+
+int main(void) {
+
+   const int SIZE = 5;
+   int playerNum[SIZE];
+   int playerRating[SIZE];
+   char menuChoice;
+   
+   for(int i=0;i<SIZE;i++){
+         printf("Enter player %d's jersey number:\n",i+1);
+         scanf("%d",playerNum+i);
+         printf("Enter player %d's rating:\n",i+1);
+         scanf("%d",playerRating+i);
+         printf("\n");
+      }
+      
+   printf("ROSTER\n");
+   for(int i=0;i<SIZE;i++){
+      printf("Player %d -- Jersey number: %d, Rating: %d\n",i+1,playerNum[i],playerRating[i]);      
+   }
+   
+   do{
+      
+      printf("\nMENU\n\
+u - Update player rating\n\
+a - Output players above a rating\n\
+r - Replace player\n\
+o - Output roster\n\
+q - Quit\n\n\
+Choose an option:\n");
+
+   scanf(" %c",&menuChoice);
+   
+   switch(menuChoice){
+      case 'o':
+         printf("\nROSTER\n");
+         for(int i=0;i<SIZE;i++){
+            printf("Player %d -- Jersey number: %d, Rating: %d\n",i+1,playerNum[i],playerRating[i]);      
+         }
+      break;
+      
+      case 'u':
+         printf("\nEnter a jersey number:\n");
+         int num;
+         scanf("%d",&num);
+         for(int i=0;i<SIZE;i++){
+            if(playerNum[i] == num){
+               printf("Enter a new rating for player:\n");
+               scanf("%d",&playerRating[i]);
+            }
+         }
+         break;
+      case 'a':
+         printf("\nEnter a rating:\n");
+         int rating;
+         scanf("%d",&rating);
+         printf("ABOVE %d\n",rating);
+         for(int i=0;i<SIZE;i++){
+            if(playerRating[i] > rating){
+               printf("Player %d -- Jersey number: %d, Rating: %d\n",i+1,playerNum[i],playerRating[i]);
+            }
+         }
+         break;
+      case'r':
+         printf("\nEnter a jersey number:\n");
+         scanf("%d",&num);
+         for(int i=0;i<SIZE;i++){
+            if(playerNum[i] == num){
+               printf("Enter a new jersey number:\n");
+               scanf("%d",&playerNum[i]);
+               printf("Enter a rating for the new player:\n");
+               scanf("%d",&playerRating[i]);
+            }
+         }
+         break;
+   }
+      
+   }while(menuChoice != 'q');
+   
+   return 0;
+}
