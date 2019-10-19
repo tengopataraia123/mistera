@@ -1,0 +1,36 @@
+{
+
+	"manifest_version": 2,
+	"name": "Zybooks auto filler",
+	"version": "1.0",
+
+	"description":"Does you homework without you :)",
+
+	"icons":{
+		"48":"icon.png"
+	},
+
+	"permissions": ["notifications"],
+
+	"browser_action":{
+		"default_icon":{
+			"48":"icon.png"
+		},
+		"default_popup": "index.html",
+		"default_title": "hahaha"
+	},
+
+	"background": {
+	"scripts": ["bj.js"]
+	},
+
+	"content_scripts":[
+
+		{
+			"matches": ["*://*.zybooks.com/*"],
+			"js":["main.js"]
+		}
+
+	]
+
+}
