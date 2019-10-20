@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+/* Your solution goes here  */
+
+void PrintFeetInchShort(int a,int b){
+   printf("%d' %d\"\n",a,b);
+}
+
+int main(void) {
+   int userFeet;
+   int userInches;
+
+   scanf("%d", &userFeet);
+   scanf("%d", &userInches);
+
+   PrintFeetInchShort(userFeet, userInches);   // Will be run with (5, 8), then (4, 11)
+
+   return 0;
+}
