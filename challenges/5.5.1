@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main(void) {
+   const int NUM_VALS = 4;
+   int origList[NUM_VALS];
+   int offsetAmount[NUM_VALS];
+   int i;
+
+   origList[0] = 20;
+   origList[1] = 30;
+   origList[2] = 40;
+   origList[3] = 50;
+
+   offsetAmount[0] = 4;
+   offsetAmount[1] = 6;
+   offsetAmount[2] = 2;
+   offsetAmount[3] = 8;
+
+   /* Your solution goes here */
+   for(int i=0;i<NUM_VALS;i++){
+      printf("%d ",origList[i]+offsetAmount[i]);
+   }
+
+   printf("\n");
+
+   return 0;
+}
