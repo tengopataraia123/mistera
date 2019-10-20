@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main(void) {
+   const int NUM_ELEMENTS = 5;
+   int runTimes[NUM_ELEMENTS];
+   int i;
+
+   for (i = 0; i < NUM_ELEMENTS; ++i) {
+      scanf("%d", &(runTimes[i]));
+   }
+
+   /* Your solution goes here  */
+   for(int i=0;i<3;i++){
+      printf("%d\n",runTimes[i]);
+   }
+
+   return 0;
+}
