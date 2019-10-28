@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+/* Define your function here */
+double StepsToMiles(int userSteps){
+   return userSteps/2000.0;
+}
+
+int main(void) {
+
+   /* Type your code here. */
+   double userSteps;
+   
+   scanf("%lf",&userSteps);
+   
+   printf("%0.2lf\n", StepsToMiles(userSteps));
+
+   return 0;
+}
