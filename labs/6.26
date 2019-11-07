@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+/* Define your function here */ 
+void HeadsOrTails(char* decisionString){
+   if((rand()%2 == 0)){
+         strcpy(decisionString,"heads");
+      }else{
+         strcpy(decisionString,"tails");
+      }
+}
+
+int main(void) {
+   /* Add more variables as needed */
+   int counter;
+   char decision[10];
+   scanf("%d",&counter);
+
+   srand(2);  /* Unique seed */
+
+   /* Type your code here. */
+   for(int i=0;i<counter;i++){
+      HeadsOrTails(decision);
+      printf("%s\n",decision);
+   }
+   
+   return 0;
+}
