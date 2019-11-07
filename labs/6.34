@@ -1,0 +1,37 @@
+#include <stdio.h>
+#include <stdbool.h>
+
+/* Define your function here */
+bool IsArrayEven(int inputVals[], int numVals){
+   for(int i=0;i<numVals;i++){
+      if(inputVals[i] %2 == 1)
+         return false;
+   }
+   return true;
+}
+bool IsArrayOdd(int inputVals[], int numVals){
+   for(int i=0;i<numVals;i++){
+      if(inputVals[i] %2 == 0)
+         return false;
+   }
+   return true;
+}
+
+int main(void) {
+
+   /* Type your code here. Remember to include the bool library*/
+   int nums[20], size;
+   scanf("%d",&size);
+   
+   for(int i=0;i<size;i++)
+      scanf("%d",nums+i);
+      
+   if(IsArrayEven(nums,size))
+      printf("all even\n");
+   else if(IsArrayOdd(nums,size))
+      printf("all odd\n");
+   else
+      printf("not even or odd\n");
+
+   return 0;
+}
