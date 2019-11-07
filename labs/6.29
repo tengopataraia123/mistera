@@ -1,0 +1,37 @@
+#include <stdio.h>
+#include <string.h>
+
+/* Define your functions here */ 
+void IntegerToReverseBinary(int integerValue, char binaryValue[]){
+   int i=0;
+   
+   while(integerValue>0){
+      binaryValue[i] = integerValue%2+'0';
+      integerValue/=2;
+      i++;
+   }
+   binaryValue[i] = '\0';
+}
+
+void ReverseString(char inputString[], char reversedString[]){
+   for(int i=0;i<strlen(inputString);i++){
+      reversedString[strlen(inputString)-i-1] = inputString[i];
+   }
+   reversedString[strlen(inputString)] = '\0';
+}
+      
+
+int main(void) {
+
+   /* Type your code here. Your code must call the functions.  */
+   char revercedBinaryValue[9],binaryValue[9];
+   int userNum;
+   
+   scanf("%d",&userNum);
+   
+   IntegerToReverseBinary(userNum,revercedBinaryValue);
+   ReverseString(revercedBinaryValue,binaryValue);
+   printf("%s\n",binaryValue);
+
+   return 0;
+}
